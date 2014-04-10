@@ -160,3 +160,35 @@ require([${1:'dependencies'}], ${2:callback});
 endsnippet
 
 # vim:ft=snippets:
+snippet bbmo "BackBone Model definition" b
+define([
+'jquery',
+'underscore',
+'backbone'
+], function (\$, _, BB) {
+var ${1:MyModel} = BB.Model.extend({
+
+// idAttribute:,
+// defaults:{},
+// initialize:function(attributes, options){},
+// validate:function(attributes, options){},
+
+});
+return $1;
+});
+endsnippet
+snippet bbco "BackBone Collection definition" b
+define([
+'jquery',
+'underscore',
+'backbone'
+], function (\$, _, BB) {
+var ${1:MyModel} = BB.Collection.extend({
+	//comparator:,
+	//url:,
+	//parse:, // parse the reponse
+	model: $2,
+});
+return $1;
+});
+endsnippet
